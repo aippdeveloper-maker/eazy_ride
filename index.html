@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eazy Ride – Cycling Your Own Routes</title>
+  <meta name="description" content="Eazy Ride lets you import your own GPX routes and ride them on a smart trainer via Bluetooth FTMS. Track cadence, power, elevation, and progress on an interactive map.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-blue: #1e40af;
+      --brand-green: #059669;
+      --bg: #f9fafb;
+      --ink: #111827;
+      --ink-muted: #6b7280;
+      --card: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --ink: #f1f5f9;
+        --ink-muted: #94a3b8;
+        --card: #1e293b;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--brand-blue), var(--brand-green));
+      color: white;
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+    }
+    header img {
+      width: 110px;
+      height: 110px;
+      border-radius: 22%;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,.2);
+    }
+    header h1 {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin: 0 0 .5rem;
+    }
+    header p {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      margin: 0 0 1.5rem;
+      opacity: .95;
+    }
+    .cta {
+      display: inline-block;
+      background: white;
+      color: var(--brand-blue);
+      padding: .75rem 1.1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,.2);
+    }
+
+    main { padding: 2rem 1.25rem; }
+    section {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    }
+    section h2 {
+    background: linear-gradient(135deg, var(--brand-blue), var(--brand-green));
+    -webkit-background-clip: text;   /* for Chrome, Safari, Edge */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;           /* for Firefox (recent versions) */
+    color: transparent;              /* fallback */
+    margin-top: 0;
+    margin-bottom: .75rem;
+    letter-spacing: .2px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: .5rem;
+    }
+    .grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    }
+    ul { padding-left: 1.1rem; margin: .25rem 0 0; }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      font-size: .95rem;
+      color: var(--ink-muted);
+    }
+    .meta {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      font-size: .95rem;
+    }
+    .meta a {
+      color: var(--brand-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="imgs/logo.png" alt="Eazy Ride logo">
+    <h1>Eazy Ride</h1>
+    <p>Cycling your own routes on a smart trainer — simple, fast, no fluff.</p>
+    <a class="cta" href="mailto:aippdeveloper@gmail.com">Get in touch</a>
+    <!-- replace with Play link when published -->
+  </header>
+
+  <main>
+    <section id="Overview">
+      <h2>What it does</h2>
+      <p>
+        Eazy Ride lets you import your own routes as <strong>GPX</strong> files and connects to your
+        smart trainer via Bluetooth using the <strong>FTMS</strong> protocol. Start pedaling and watch your
+        position progress along the route while monitoring <strong>cadence</strong>, <strong>power (watts)</strong>,
+        <strong>speed</strong>, and <strong>elevation</strong> on an interactive map and elevation panel.
+      </p>
+      <div class="grid">
+        <img src="imgs/img1.jpg" alt="Eazy Ride map with route and live stats">
+        <img src="imgs/img2.jpg" alt="Elevation profile and metrics">
+      </div>
+    </section>
+
+    <section id="Motivation">
+      <h2>Why I built it</h2>
+      <p>
+        I wanted to ride <em>my</em> routes on a trainer and benchmark how quickly I could reach, for example,
+        my office—then track improvement over time. Existing apps are great, but felt heavy for this simple goal.
+        Eazy Ride keeps it focused: no subscriptions, no social overhead—just your route and your effort.
+      </p>
+    </section>
+
+    <section id="Coming_Soon">
+      <h2>Coming soon</h2>
+      <ul>
+        <li>Predefined classic climbs & benchmarks</li>
+        <li>Google Street View previews</li>
+        <li>Leaderboards</li>
+      </ul>
+    </section>
+
+    <section id="Contact">
+      <h2>Contact</h2>
+      <p>Want to share feedback or request a feature? I’d love to hear from you.</p>
+      <div class="meta">
+        <a href="mailto:aippdeveloper@gmail.com">aippdeveloper@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Eazy Ride
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
